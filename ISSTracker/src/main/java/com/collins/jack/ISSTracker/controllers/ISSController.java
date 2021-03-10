@@ -14,6 +14,9 @@ public class ISSController {
     @Autowired
     private LocationService locationService;
 
+    @Autowired
+    private LocationService locationService;
+
     @GetMapping("/issLocation")
     public IssLocator getISSLocation() {
         return this.locationService.getIssLocation();
