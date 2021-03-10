@@ -1,0 +1,5 @@
+com\collins\jack\ISSTracker\models\IssPosition.class
+com\collins\jack\ISSTracker\IssTrackerApplication.class
+com\collins\jack\ISSTracker\controllers\ISSController.class
+com\collins\jack\ISSTracker\models\IssLocator.class
+com\collins\jack\ISSTracker\service\LocationService.class
