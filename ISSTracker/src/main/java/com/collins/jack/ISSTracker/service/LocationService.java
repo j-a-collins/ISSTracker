@@ -7,9 +7,17 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class LocationService {
-    @HystrixCommand
+    private static final String FAILED = "failed";
+
+    @HystrixCommand(fallbackMethod = "fallback")
     public IssLocator getIssLocation() {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject("http://api.open-notify.org/iss-now.json", IssLocator.class);
+    }
+
+    public IssLocator fallback() {
+        IssLocator issLocator = new IssLocator();
+        issLocator.setMessage(FAILED);
+        return issLocator;
     }
 }

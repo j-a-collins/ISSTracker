@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ISSController {
 
-    private static final String FAILED = "failed";
+    @Autowired
+    private LocationService locationService;
 
     @Autowired
     private LocationService locationService;

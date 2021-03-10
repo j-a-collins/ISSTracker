@@ -3,7 +3,7 @@ package com.collins.jack.ISSTracker.models;
 public class IssLocator {
     private long timestamp;
     private String message;
-    private IssPosition issPosition;
+    private IssPosition iss_position;
 
     public long getTimestamp() {
         return timestamp;
@@ -21,12 +21,12 @@ public class IssLocator {
         this.message = message;
     }
 
-    public IssPosition getIssPosition() {
-        return issPosition;
+    public IssPosition getIss_position() {
+        return iss_position;
     }
 
-    public void setIssPosition(IssPosition issPosition) {
-        this.issPosition = issPosition;
+    public void setIss_position(IssPosition iss_position) {
+        this.iss_position = iss_position;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class IssLocator {
         return "IssLocator{" +
                 "timestamp=" + timestamp +
                 ", message='" + message + '\'' +
-                ", issPosition=" + issPosition +
+                ", iss_position=" + iss_position +
                 '}';
     }
 }
